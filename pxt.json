@@ -1,0 +1,22 @@
+{
+    "name": "HicBit",
+    "version": "0.4.2",
+    "description": "My translated HicBit extension",
+    "license": "TIM",
+    "dependencies": {
+        "core": "file:../core",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "hicbit.ts",
+        "hicbitRGBLight.ts",
+        "sendbuffer.asm",
+        "_locales/zh/HicBit-strings.json",
+        "_locales/zh/HicBit-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}

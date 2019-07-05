@@ -1124,67 +1124,6 @@ namespace hicbit {
         return Math.round(adValue);
     }
 
-    
-
-    /**
-    * Get the condition of the line follower sensor
-    */
-    /*
-    //% weight=39 blockId=hicbit_readLineFollowerStatus block="Line follower status|port %port|%status"
-    export function hicbit_readLineFollowerStatus(port: hicbit_lineFollowPort, status: hicbit_lineFollower): boolean {
-        let s1 = 0;
-        let s2 = 0;
-        switch (port) {
-            case hicbit_lineFollowPort.port1:
-                s1 = pins.analogReadPin(AnalogPin.P1);
-                s2 = pins.analogReadPin(AnalogPin.P0);
-                s1 = s1 * 255 / 1023;
-                s2 = s2 * 255 / 1023;
-                if (s1 < 100)
-                    s1 = 0;
-                else
-                    s1 = 1;
-                if (s2 < 100)
-                    s2 = 0;
-                else
-                    s2 = 1;
-                break;
-        }
-        let s = ((1 & s1) << 1) | s2;
-        if (s == status) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    /**
-     * Get the line follower sensor port ad value
-     */
-    //% weight=38 blockId=hicbit_lineSensorValue block="Get line follower sensor|port %port|%sensor|ad value"
-    /*
-    export function hicbit_lineSensorValue(port: hicbit_lineFollowPort, sensor: hicbit_LineFollowerSensor): number {
-        let s1 = 0;
-        let s2 = 0;
-        switch (port) {
-            case hicbit_lineFollowPort.port1:
-                s1 = pins.analogReadPin(AnalogPin.P1);
-                s2 = pins.analogReadPin(AnalogPin.P0);
-                s1 = s1 * 255 / 1023;
-                s2 = s2 * 255 / 1023;
-                break;
-        }
-        if (sensor == hicbit_LineFollowerSensor.LFSensor_1) {
-            return 255 - Math.round(s1);
-        }
-        else {
-            return 255 - Math.round(s2);
-        }
-
-    }
-    */
-
 
     let distanceBak = 0;
     /**
